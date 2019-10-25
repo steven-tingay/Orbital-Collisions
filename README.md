@@ -13,7 +13,7 @@ The code base also includes a python wrapper to the C code that produces the plo
 
 Download main.c and main.h and compile e.g.: gcc -o collison main.c 
 
-The resultant executable can be run via command line arguments as: collision <charlen> <mass> <output> <numloops>, where:
+The resultant executable can be run via command line arguments as: collision [charlen] [mass] [output] [numloops], where:
   
   charlen: is the lower limit on characteristic length (m)
   
@@ -25,4 +25,4 @@ The resultant executable can be run via command line arguments as: collision <ch
   
 If the executable is run without command line arguments, it will prompt the user for the first three arguments above and run a single simulation.
 
-Run the phython script collision.py, after setting the parameters at the top of the script.  collision.py runs the C code and produces all the plots used in the paper with the default settings (however note that the individual realisation of the simulation will be different to that presented in the paper).
+Run the phython script collision.py, after setting the parameters at the top of the script and the paths to the relevant directories.  collision.py runs the C code and produces all the plots used in the paper with the default settings (however note that the individual realisation of the simulation will be different to that presented in the paper).
