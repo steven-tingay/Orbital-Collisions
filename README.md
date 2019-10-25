@@ -14,9 +14,13 @@ The code base also includes a python wrapper to the C code that produces the plo
 Download main.c and main.h and compile e.g.: gcc -o collison main.c 
 
 The resultant executable can be run via command line arguments as: collision <charlen> <mass> <output> <numloops>, where:
+  
   charlen: is the lower limit on characteristic length (m)
+  
   mass: is the collision mass (kg)
+  
   output: indicates output to terminal or not (0=terminal; 1=not)
+  
   numloops: number of times to run the simulation
   
 If the executable is run without command line arguments, it will prompt the user for the first three arguments above and run a single simulation.
