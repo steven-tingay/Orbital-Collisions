@@ -9,4 +9,16 @@ As the paper is accepted, we will update this README with links to a public pre-
 
 The code base consists of an implementation (in C) of the EVOLVE 4.0 NASA Breakup Model, by Johnson, N.L., Krisko, P.H., Liou, J.-C., and Anz-Meador, P.D., "NASA's new breakup model of evolve 4.0", Advances in Space Research, 2001, #9, pp 1377-1384}: DOI: 10.1016/S0273-1177(01)00423-9, ADS: https://ui.adsabs.harvard.edu/abs/2001AdSpR..28.1377J.
 
-The code base also includes a python wrapper to the C code that produces the plots and analysis that are presented in our paper.
+The code base also includes a python wrapper to the C code that produces the plots and analysis that are presented in our paper.  To set up the code:
+
+Download main.c and main.h and compile e.g.: gcc -o collison main.c 
+
+The resultant executable can be run via command line arguments as: collision <charlen> <mass> <output> <numloops>, where:
+  charlen: is the lower limit on characteristic length (m)
+  mass: is the collision mass (kg)
+  output: indicates output to terminal or not (0=terminal; 1=not)
+  numloops: number of times to run the simulation
+  
+If the executable is run without command line arguments, it will prompt the user for the first three arguments above and run a single simulation.
+
+Run the phython script collision.py, after setting the parameters at the top of the script.  collision.py runs the C code and produces all the plots used in the paper with the default settings (however note that the individual realisation of the simulation will be different to that presented in the paper).
